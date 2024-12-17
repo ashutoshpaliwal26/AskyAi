@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/controller/authentication/signup.ts","./src/router/auth.ts","./src/utils/bcryptutils.ts","./src/utils/jwtutils.ts"],"version":"5.7.2"}

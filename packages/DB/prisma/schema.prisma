@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  name         String?
+  email        String    @unique
+  password     String
+  subscription String    @default("FREE")
+  messages     Message[]
+  history      History?  @relation("UserHistory")
+
+  @@map("user")
+}
+
+model Message {
+  id        Int       @id @default(autoincrement())
+  content   String
+  response  String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  user      User      @relation(fields: [userId], references: [id])
+  userId    Int
+  history   History?  @relation(fields: [historyId], references: [id])
+  historyId Int?
+
+  @@map("message")
+}
+
+model History {
+  id       Int       @id @default(autoincrement())
+  messages Message[]
+  user     User      @relation("UserHistory", fields: [userId], references: [id])
+  userId   Int       @unique
+
+  @@map("history")
+}

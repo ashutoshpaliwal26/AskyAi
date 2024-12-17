@@ -5,7 +5,11 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        ".apps/server/dist/**"
+      ]
     },
     "lint": {
       "dependsOn": ["^lint"]
@@ -16,6 +20,9 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "prisma": {
+      "outputs": ["node_modules/@repo/DB/client/**"]
     }
   }
 }
