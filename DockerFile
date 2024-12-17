@@ -1,0 +1,52 @@
+# ================================
+# Base Stage: Install dependencies
+# ================================
+FROM node:20-alpine AS base
+
+WORKDIR /app
+
+# Copy package.json and lock files
+COPY package.json package-lock.json* ./
+
+# Install dependencies
+RUN npm install --legacy-peer-deps
+
+# Copy the rest of the monorepo files
+COPY . .
+
+# ================================
+# Build Stage: Turbo builds
+# ================================
+FROM base AS build
+
+# Build using Turborepo (assumes turbo.json in the root)
+RUN npx turbo run build --filter=...
+
+# ================================
+# Frontend Stage: React Application
+# ================================
+
+# ================================
+# Backend Stage: Express Server
+# ================================
+FROM node:20-alpine AS backend
+
+WORKDIR /app
+
+# Copy built backend
+COPY --from=build /app/apps/server .
+
+# Install production dependencies
+RUN npm install --only=production
+
+# Expose the port for the Express server
+EXPOSE 8000
+
+# Start the Express server
+CMD ["node", "index.js"]
+
+# ================================
+# Final Stage: Combined Services (Optional)
+# ================================
+# If you want to use a single container to run everything:
+# Use Docker Compose to run multiple services
