@@ -18,9 +18,4 @@ npx prisma generate
 
 echo "Database setup complete!"
 
-echo "|---- Running Server ----|"
-node ./apps/server/dist/index.js
-
-echo "Running Server Successfully"
-
 
