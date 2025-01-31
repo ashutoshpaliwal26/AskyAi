@@ -17,8 +17,8 @@ I've embarked on an exciting journey to develop my very own AI-powered chatbot ð
 ## Technical Stack
 - **Backend**: `Node.js / Express`
 - **AI Model**: `Gemini AI`
-- **Frontend**: `React / Next.js` 
-- **Database**: `PostgreSQL / MongoDB` 
+- **Frontend**: `React Js` 
+- **Database**: `PostgreSQL PRISMA` 
 - **Hosting**: `Render / Vercel / Docker` 
 
 ## Challenges & Learnings
