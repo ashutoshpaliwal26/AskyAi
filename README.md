@@ -9,17 +9,17 @@ I've embarked on an exciting journey to develop my very own AI-powered chatbot �
 - **🎯 Purpose**: A highly responsive and intuitive chatbot that can engage users, answer queries, and enhance overall interaction quality.
 
 ## Features
-✅ **Real-Time Interactions** - Ensuring smooth and instantaneous responses.
-✅ **Custom AI Integration** - Embedded with APIs for seamless functionality.
-✅ **Scalability** - Designed to evolve and adapt to different use cases.
-✅ **User-Friendly Interface** - A chatbot experience that is both accessible and efficient.
+- ✅ **Real-Time Interactions** - Ensuring smooth and instantaneous responses.
+- ✅ **Custom AI Integration** - Embedded with APIs for seamless functionality.
+- ✅ **Scalability** - Designed to evolve and adapt to different use cases.
+- ✅ **User-Friendly Interface** - A chatbot experience that is both accessible and efficient.
 
 ## Technical Stack
-- **Backend**: Node.js / Express
-- **AI Model**: Gemini AI
-- **Frontend**: React
-- **Database**: PostgreSQL (PRISMA)
-- **Hosting**: Render / Vercel / Docker
+- **Backend**: `Node.js / Express`
+- **AI Model**: `Gemini AI`
+- **Frontend**: `React / Next.js` 
+- **Database**: `PostgreSQL / MongoDB` 
+- **Hosting**: `Render / Vercel / Docker` 
 
 ## Challenges & Learnings
 Building this chatbot has been both **challenging** and **rewarding**. Key aspects I explored include:
@@ -28,9 +28,9 @@ Building this chatbot has been both **challenging** and **rewarding**. Key aspec
 - Enhancing real-time response efficiency.
 
 ## Future Enhancements
-🚀 Expanding features for broader AI-driven functionalities.
-📈 Optimizing performance for even faster and smarter interactions.
-🔗 Exploring more integrations to enhance usability.
+- 🚀 Expanding features for broader AI-driven functionalities.
+- 📈 Optimizing performance for even faster and smarter interactions.
+- 🔗 Exploring more integrations to enhance usability.
 
 ## Get Involved
 I'm excited about how this project can contribute to personal and business applications. If you're interested in learning more, collaborating, or sharing insights, feel free to connect!
